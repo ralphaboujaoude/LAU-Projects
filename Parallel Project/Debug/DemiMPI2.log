@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\srajvanshi\Downloads\DemiMPI2\main.c(137,37): warning C4244: '=': conversion from 'uint64_t' to 'uint8_t', possible loss of data
+C:\Users\srajvanshi\Downloads\DemiMPI2\main.c(140,37): warning C4244: '=': conversion from 'uint64_t' to 'uint8_t', possible loss of data
+C:\Users\srajvanshi\Downloads\DemiMPI2\main.c(155,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\srajvanshi\Downloads\DemiMPI2\main.c(158,48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\srajvanshi\Downloads\DemiMPI2\main.c(152,11): warning C4101: 'xp': unreferenced local variable
+  DemiMPI2.vcxproj -> C:\Users\srajvanshi\Downloads\DemiMPI2\Debug\DemiMPI2.exe
