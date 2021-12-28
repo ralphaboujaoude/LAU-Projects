@@ -1,0 +1,412 @@
+nav{
+    background-color: #333;
+}
+.navbar{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+body {
+    margin: auto;
+    background-color: #333;
+  }
+h1,h2,h3,h4,h5,h6{
+  font-family: headerFont;
+}  
+a{
+  font-family: navFont;
+}
+p{
+  font-family: parFont;
+} 
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: left;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo{
+    margin-left: 16px;
+    position: relative;
+    float: left;
+    padding-top: 10px;
+    width: 70px;
+    height: 35px;
+}
+.z{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;  
+}
+.z:hover{
+    transition: 0.4s;
+    text-decoration: underline;
+    color:red;
+}
+.banner{
+    font-size: 3rem;
+    background-image: url(images/2492629.jpg);
+    padding-left: 0px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner_p1{
+    margin-top: 0;
+    margin-bottom: 60px;
+    padding: 80px 10px 5px 10px;
+    text-transform: capitalize;
+    font-size: larger;
+}
+.banner_p2{
+    font-size: large;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+.aboutus_container{
+    margin-top: 25px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+.p_container{
+    margin: 50px;
+}
+.footer-section {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: 6px;
+  }
+  #stay_connected {
+    border-right: 1px solid white;
+    padding-right: 10px;
+    width: 33%;
+  }
+  #email {
+    border-right: 1px solid white;
+    width: 33%;
+    text-align: left;
+    padding-top: 50px;
+    margin-left: 20px;
+  }
+  #social_media {
+    margin-left: 10px;
+    width: 33%;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  h2{
+    font-size: 2.5em;
+  }
+  h3{
+      color: white;
+      font-size: 2.5em;
+      text-align: center;
+      padding-top: 40px;
+  }
+  .h3back{
+    padding:10px;
+    background-image: url(images/124001.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+  .form{
+    line-height: 50px;
+    padding:100px 100px 0px 100px;
+  }
+  .touch{
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  #name{
+    height:30px;
+    font-size:14pt;
+}
+#e{
+    height:30px;
+    font-size:14pt;
+}
+#phnumber{
+    height:30px;
+    font-size:14pt;
+}
+#message{
+    font-size:14pt;
+}
+#req{
+    color: white;
+    margin-top: -20px;
+    margin-left: 321px;
+}
+#submit{
+    background-color: black;
+    color:white;
+    padding:15px;
+    margin-left: 400px;
+    font-style: italic;
+}
+.contactus {
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  .form {
+    border-right: 1px solid white;
+    width: 35%;
+  }
+  .info {
+    margin-top: 120px;
+    margin-left: 20px;
+    width: 65%;
+    text-align: center;
+  }
+  .pinfo{
+      line-height: 30px;
+  }
+  h4{
+      font-size: 1.5em;
+  }
+  #googleMap{
+      margin-top: 40px;
+      padding-top: 50px;
+      width: 100%;
+      height: 450px;
+      background-image: url(images/maps1.png);
+  }
+  h5{
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 7px;
+}
+.h5back{
+  padding:10px;
+  background-image: url(images/13672.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  width: 98.4%;
+  height: 130px;
+}
+.cars {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.carimages{
+  margin: 30px;
+  width: 400px;
+}
+.carimages:hover{
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.carsdivs{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid white;
+}
+.pheader{
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.ppar{
+  padding-top: 12px;
+}
+.sold{
+  position: relative;
+  left:7px;
+  bottom: 3px;
+  border:2px solid red;
+  border-radius: 15px;
+  padding:5px;
+  color: red;
+  font-size: 1.2em;
+}
+
+@font-face {
+  font-family: parFont;
+  src: url(fonts/Varela_Round/VarelaRound-Regular.ttf);
+}
+@font-face {
+  font-family: headerFont;
+  src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: navFont;
+  src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo{
+    width: 20%;
+    margin: auto;
+    }
+    nav{
+    display: flex;
+    flex-direction: column;
+    }
+    .navbar{
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    }
+    ul{
+      flex-direction: column;
+    }
+    li{
+      padding: 20px;
+    }
+    .carimages{
+      width: 350px;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-size:large;
+    }
+    p{
+      font-size:small;
+    }
+    #googleMap{
+      background-image: url(images/maps2.png);
+      background-repeat: no-repeat;
+      margin-bottom: -180px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .logo{
+    width: 20%;
+    margin: auto;
+    }
+    nav{
+    display: flex;
+    flex-direction: column;
+    }
+    .navbar{
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    }
+    ul{
+      flex-direction: column;
+    }
+    li{
+      padding: 20px;
+    }
+    .carimages{
+      width: 350px;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-size:large;
+    }
+    p{
+      font-size:small;
+    }
+    #googleMap{
+      background-image: url(images/maps2.png);
+      background-repeat: no-repeat;
+      margin-bottom: -180px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width :992px) {
+    .form{
+      width: 40%;
+    }
+    .info{
+      width: 60%;
+    }
+    #message{
+      width: 300px;
+    }
+    #name{
+      width: 300px;
+    }
+    #e{
+      width: 300px;
+    }
+    #phnumber{
+      width: 300px;
+    }
+    .form{
+      margin-left: -50px;
+    }
+    #req{
+      margin-left: 200px;
+    }
+    #submit{
+      margin-left: 220px;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .form{
+    width: 40%;
+  }
+  .info{
+    width: 60%;
+  }
+  #message{
+    width: 300px;
+  }
+  #name{
+    width: 300px;
+  }
+  #e{
+    width: 300px;
+  }
+  #phnumber{
+    width: 300px;
+  }
+  .form{
+    margin-left: -50px;
+  }
+  #req{
+    margin-left: 200px;
+  }
+  #submit{
+    margin-left: 220px;
+  }
+}
