@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Form</title>
+    <style>
+      body {
+        text-align: center;
+        background-color:royalblue;
+      }
+      #mylink {
+        font-size: 25px;
+      }
+      #login-form{
+        border: 2px solid red;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+
+    <form id="login-form">
+      
+        <label>Email ID</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="abc@example.com"
+          required
+        />
+        <br /><br />
+
+        <label>Password</label>
+        <input type="password" id="password" name="password" required />
+        <br /><br />
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+        <span id="log-error" style="color:red">incorrect username or password!</span>
+      
+    </form>
+    <br /><br />
+    <a id="mylink" href="register">Register</a>
+
+	<script>
+    document.getElementById('log-error').style.display='none';
+    let once = true;
+		let loginForm = document.getElementById("login-form");
+		loginForm.addEventListener("submit", function(event){
+			event.preventDefault();
+			var xmlhttp = new XMLHttpRequest();  
+			xmlhttp.open("POST", "/login");
+			xmlhttp.setRequestHeader("Content-Type", "application/json");
+			xmlhttp.send(JSON.stringify({
+				email:loginForm.elements["email"].value,
+				password:loginForm.elements["password"].value,
+			}));
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				  let token = JSON.parse(this.response).token;
+				  localStorage.setItem("token", token);
+				  window.location.href = "/";
+				}
+        if(this.status == 400){
+          document.getElementById('log-error').style.display='';
+        }
+			  };
+		});
+
+		
+	</script>
+  </body>
+</html>

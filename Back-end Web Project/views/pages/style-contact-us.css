@@ -1,0 +1,175 @@
+
+.contactus{
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background_p1.jpg); 
+    /* background: url(images/background-contact.jpg); */
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display:flex;
+}
+.contactbody{
+    max-width: 850px;
+    text-align: center;
+
+}
+.contactus .contactbody h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: cyan
+    
+}
+
+.contactus .contactbody p {
+    font-weight: 250;
+    color: white;
+    
+}
+.desc {
+    display: flex;
+    margin-left: 25px;
+    font-size: 15px;
+    color:white;
+    flex-direction: column;
+    font-weight: 250;
+    
+}
+span a {
+    text-decoration: none;
+    color: white;
+}
+.form h3{
+    color:cyan;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-card;
+    font-family: 'Roboto';
+    
+    
+}
+.division {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.division .ourinfo{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.division .ourinfo .card {
+    display:flex;
+    position: relative;
+    padding: 30px 0;
+}
+.logo {
+    min-width: 50px;
+    height: 50px;
+    background:darkblue;
+    display: flex;
+    justify-content: center ;
+    border-radius: 30%;
+    font-size: 25px;
+}
+.inputText{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+
+}
+.desc h2 {
+    color : cyan
+}
+.form{
+    background: white;
+    padding: 45px;
+    width: 55%;
+}
+.form h3{
+    font-weight: 800;
+    font-size: 28px;
+    color:darkblue;
+    
+}
+input,textarea {
+    outline:none;
+    border: none;
+    border-bottom: 3px solid darkblue;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 10px 0;
+}
+@media (max-width: 991px){
+    .contactus {
+        padding: 45px;
+    }
+    .division{
+        flex-direction: column;
+
+    }
+    .division .ourinfo{
+        margin-bottom: 35px;
+    }
+    .form{
+        width: 100%;
+    }
+
+}
+
+.header{
+     background-image:url(images/background-contact.jpg); 
+    width: 100%;
+     
+    background-position: center;
+    position: relative;   
+    display: flexbox; 
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-links ul li :hover::after{
+    width: 100%;
+}

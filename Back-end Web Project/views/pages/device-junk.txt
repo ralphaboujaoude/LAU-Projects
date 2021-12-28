@@ -1,0 +1,72 @@
+ <div class="card">
+                <div class="cardcontent">
+                    <img src="/images/samsung-fold-3.jpg">
+                    <div class="item">Samsung Z Fold 3</div>
+                    <div class="price">999$</div>
+                    <div class="desc">Samsung reveals a breathtaking technology with its new folding smartphone.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/samsung-flip-3.jpg">
+                    <div class="item">Samsung Flip 3</div>
+                    <div class="price">1444$</div>
+                    <div class="desc">You can be greatly productive with this device; it's a phone with tablet
+                        abilities.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/hp-envy.jpg">
+                    <div class="item">HP Envy 360</div>
+                    <div class="price">1190$</div>
+                    <div class="desc">One of the best laptops in the market. This laptop has a 360 degrees touch
+                        screen,16GB RAM, a 256SSD, and an HDD of 1TB.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/hp-pen.jpg">
+                    <div class="item">HP Pen</div>
+                    <div class="price">99$</div>
+                    <div class="desc">This smart HP pen can be used on all touch screens that support pen writing
+                        technology. It works best for taking notes and drawing graphics with details.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/apple-watch.jpg">
+                    <div class="item">Apple Watch Series 5</div>
+                    <div class="price">250$</div>
+                    <div class="desc">The newest apple watch comes with new features that will blow your mind.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/chromebook.jpg">
+                    <div class="item">Chromebook Tablet</div>
+                    <div class="price">390$</div>
+                    <div class="desc">The chromebook tablet is one of the most affordable tablets on the market. It
+                        works best for students or employees who would like to carry a light product with heavy
+                        features.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/remarkable.jpg">
+                    <div class="item">Remarkable Smart Notebook</div>
+                    <div class="price">800$</div>
+                    <div class="desc">As its name implies, this smart notebook is really remarkable. It gives you the
+                        ability to digitize your handwritten notes and sync them directly to the cloud or share them.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardcontent">
+                    <img src="images/surface-pro.png">
+                    <div class="item">Microsoft surface pro 2</div>
+                    <div class="price">400$</div>
+                    <div class="desc">The microsoft surface pro 2 is one of the most affordable tablets having a fully
+                        functional windows OS.</div>
+                </div>
+            </div>

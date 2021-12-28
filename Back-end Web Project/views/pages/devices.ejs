@@ -1,0 +1,233 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Devices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/devices.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style-cart.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<style>
+    #shopping-cart{
+        background-color: lightslategray;
+        color:blue;
+    }
+    .button{
+        background-color: darkslateblue;
+        color:white;
+    }
+    .add-item{
+        background-color: darkslateblue;
+        color:white;
+    }
+    #clear-cart{
+        background-color: darkslateblue;
+        color:white;
+    }
+    .btn{
+        background-color: darkslateblue;
+        color:white;
+    }
+    .remove{
+        background-color: darkslateblue;
+        color:white;
+    }
+</style>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="/images/logo_p1.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="devices">DEVICES</a></li>
+                    <li><a href="about-us">ABOUT</a></li>
+                    <li><a href="contact-us">CONTACT US</a></li>
+                    <li class="not-logged"><a href="login">LOGIN</a></li>
+                    <li class="not-logged"><a href="register">REGISTER</a></li>
+                    <li class="logged"></li>
+                    <li><a id="logout">LOGOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="container">
+
+
+        <button id="shopping-button" class="button">Shopping Cart</button>
+        <div id="shopping-cart" class="CartContainer">
+            <div class="Header">
+                <h3 class="Heading">Shopping Cart</h3>
+                <button id="clear-cart" class="Action">Remove all</button>
+            </div>
+            <div class="Cart-Items pad">
+            </div>
+          <hr> 
+          <div class="checkout">
+          <div class="total">
+              <div>
+                  <div class="Subtotal">Sub-Total</div>
+                  <div id="total-items" class="items"></div>
+              </div>
+              <div id="total-amount" class="total-amount"></div>
+          </div>
+          <button id="checkout-btn" class="button">Checkout</button></div>
+     </div>
+
+
+
+        <div class="cardssection">
+           
+        </div>
+    </div>
+    <script src="displayName.js"></script>
+    <script>
+        let shoppingCart = document.getElementById("shopping-cart");
+        shoppingCart.style.display = 'none';
+        let shoppingButton = document.getElementById("shopping-button");
+        shoppingButton.addEventListener("click", ()=>{
+            if(shoppingCart.style.display == 'none')
+                shoppingCart.style.display = '';
+            else
+                shoppingCart.style.display = 'none';
+        })
+
+        
+    </script>
+    <script defer async>
+            let devices;
+            let shoppingItems = [];
+            let shoppingPrices = [];
+            var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    devices = JSON.parse(this.responseText);
+                    let devicesContainer = document.getElementsByClassName("cardssection")[0];
+                    devices.map((device, i) => {
+                        let deviceContent = document.createElement("div");
+                        deviceContent.classList.add("card");
+                        deviceContent.innerHTML = `<div class="cardcontent">
+                            <img src="${device.img}">
+                            <div class="item">${device.title}</div>
+                            <div class="price">$${device.price}</div>
+                            <div class="desc">${device.description}</div>
+                            <button class="add-item" onclick="addToCart(${i})">add</add>
+                        </div>`;
+                        devicesContainer.appendChild(deviceContent);
+                    })
+                }
+            };
+            xmlhttp.open("GET", "/api/devices");
+            xmlhttp.send();
+
+            function addToCart(index){
+                if(shoppingItems.includes(index)){
+                    alert("Item already added!");
+                    return;
+                }
+                let shoppingItem = document.createElement('div');
+                let device = devices[index];
+                shoppingItem.innerHTML = `<div class="image-box">
+                    <img src="${device.img}" style="height:120px" />
+                </div>
+                <div class="about">
+                    <h1 class="title">${device.title}</h1>
+                </div>
+                <div class="counter">
+                    <button id="increase-btn-${index}" class="btn">+</button>
+                    <div id="item-count-${index}" class="count">1</div>
+                    <button id="decrease-btn-${index}" class="btn">-</button>
+                </div>
+                <div class="prices">
+                    <div class="amount">\$${device.price}</div>
+                    <button id="remove-btn-${index}" class="remove">Remove</button>
+                </div>`;
+                document.getElementsByClassName("Cart-Items")[0].appendChild(shoppingItem);
+                shoppingItems.push(index);
+                shoppingPrices.push(device.price);
+                calculateTotalItems(shoppingItems);
+                calculateTotalPrice(shoppingPrices);
+
+                document.getElementById(`increase-btn-${index}`).onclick=()=>{
+                    let itemCount = document.getElementById(`item-count-${index}`);
+                    itemCount.innerHTML = parseInt(itemCount.textContent)+1;
+                    shoppingPrices.push(device.price);
+                    calculateTotalPrice(shoppingPrices);
+                }
+
+                document.getElementById(`decrease-btn-${index}`).onclick=()=>{
+                    let itemCount = document.getElementById(`item-count-${index}`);
+
+                    if(parseInt(itemCount.textContent)<=1){
+                        itemCount.innerHTML = 1;
+                        return;
+                    }
+
+                    itemCount.innerHTML = parseInt(itemCount.textContent)-1;
+                    let i = shoppingPrices.indexOf(device.price);
+                    if (i > -1) {
+                        shoppingPrices.splice(i, 1);
+                    }
+                    calculateTotalPrice(shoppingPrices);
+                }
+                
+                document.getElementById(`remove-btn-${index}`).onclick = () =>{
+                    let itemCount = document.getElementById(`item-count-${index}`);
+                    for(var j=0; j<parseInt(itemCount.textContent); j++) {
+                        let i = shoppingPrices.indexOf(device.price);
+                            if (i > -1) {
+                                shoppingPrices.splice(i, 1);
+                            }
+                        }
+                    calculateTotalPrice(shoppingPrices);
+                    let i = shoppingItems.indexOf(index);
+                    if (i > -1) {
+                        shoppingItems.splice(i, 1);
+                    }
+                    calculateTotalItems(shoppingItems);
+                    document.getElementsByClassName("Cart-Items")[0].removeChild(shoppingItem);
+                }
+            }
+
+            function calculateTotalPrice(shoppingPrices){
+                document.getElementById("total-amount").innerHTML=`\$${shoppingPrices.reduce((a, b) => a + b, 0)}`;
+            }
+
+            function calculateTotalItems(shoppingItems){
+                document.getElementById("total-items").innerHTML=`${shoppingItems.length} items`;
+            }
+
+            document.getElementById("clear-cart").onclick = () => {
+                shoppingPrices = [];
+                shoppingItems = [];
+                document.getElementById("total-items").innerHTML = "0 items";
+                document.getElementById("total-amount").innerHTML = "$0";
+                while(document.getElementsByClassName("Cart-Items")[0].firstChild){
+                    document.getElementsByClassName("Cart-Items")[0].removeChild(document.getElementsByClassName("Cart-Items")[0].firstChild);
+                }
+            }
+
+            document.getElementById("checkout-btn").onclick = function(){
+                if(shoppingItems.length === 0){
+                    alert("Shopping cart is empty!");
+                    return;
+                }
+                let checkoutDevices = [];
+                shoppingItems.forEach((i) => {
+                    let count = parseInt(document.getElementById(`item-count-${i}`).textContent);
+                    devices[i].count = count;
+                    console.log(devices[i]);
+                    checkoutDevices.push(devices[i]);
+                });
+                let totalprice = shoppingPrices.reduce((a, b) => a + b, 0);
+                localStorage.setItem("checkout", JSON.stringify(checkoutDevices));
+                localStorage.setItem("totalprice", totalprice);
+                window.location.href = "/checkout";
+            }
+                
+    </script>
+
+</body>
+
+</html>
