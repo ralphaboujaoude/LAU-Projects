@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles/style-contact-us.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+</head>
+<style>
+    #submit_btn:hover {
+        background-color: darkslateblue;
+        color: white;
+        transition: 0.3s;
+    }
+</style>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="/images/logo_p1.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="devices">DEVICES</a></li>
+                    <li><a href="about-us">ABOUT</a></li>
+                    <li><a href="contact-us">CONTACT US</a></li>
+                    <li class="not-logged"><a href="login">LOGIN</a></li>
+                    <li class="not-logged"><a href="register">REGISTER</a></li>
+                    <li class="logged"></li>
+                    <li><a id="logout">LOGOUT</a></li>
+                    <li><a id="admin-panel" href="admin">ADMIN PANEL</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="contactus">
+
+        <div class="contactbody">
+            <h2>Contact Us</h2>
+            <p>If you own a business and you need to negotiate the prices with us, feel free to contact us. We will get
+                back to you as soon as possible.</p>
+        </div>
+
+        <div class="division">
+
+            <div class="ourinfo">
+
+                <div class="card">
+
+                    <div class="logo"><img src="/images/address.png" alt=""></div>
+
+                    <div class="desc">
+                        <h2>Where can you find us?</h4>
+                            <p>Beirut, <b>Badaro St</b></p>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="logo"><img src="/images/phone.png" alt=""></div>
+                    <div class="desc">
+                        <h2>How to reach us?</h4>
+                            <p><a href="tel:+96181992567">+96181992567</a></p>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="logo"><img src="/images/email.png" alt=""></div>
+                    <div class="desc">
+                        <h2>Another way to reach us</h4>
+                            <p><a href="mailto:smartdevices@gmail.com">Send us an email!</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form">
+                <form id="form">
+                    <h3>Reach Us</h3>
+
+                    <div class="inputText">
+                        <input name="name" type="text" required="required">
+                        <span>Your Name</span>
+                    </div>
+                    <div class="inputText">
+                        <input name="email" type="text" required="required">
+                        <span>Your Email</span>
+                    </div>
+                    <div class="inputText">
+                        <textarea name="message" type="text" required="required"></textarea>
+                        <span>Your Message</span>
+                    </div>
+                    <div class="inputText">
+                        <input type="submit" value="Submit" id="submit_btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/js/displayName.js"></script>
+    <script>
+
+        let form = document.getElementById("form")
+        form.addEventListener("submit", function (event) {
+            var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+            xmlhttp.open("POST", "/form");
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.send(JSON.stringify({
+                name: form.elements["name"].value,
+                email: form.elements["email"].value,
+                message: form.elements["message"].value
+            }));
+        });
+
+    </script>
+</body>
+
+</html>

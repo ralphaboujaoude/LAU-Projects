@@ -1,0 +1,107 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Devices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/devices.css">
+    <link rel="stylesheet" href="/styles/chat.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/styles/style-cart.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+    <script src="https://scripts.sirv.com/sirv.js"></script>
+</head>
+
+
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="/images/logo_p1.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="devices">DEVICES</a></li>
+                    <li><a href="about-us">ABOUT</a></li>
+                    <li><a href="contact-us">CONTACT US</a></li>
+                    <li class="not-logged"><a href="login">LOGIN</a></li>
+                    <li class="not-logged"><a href="register">REGISTER</a></li>
+                    <li class="logged"></li>
+                    <li><a id="logout">LOGOUT</a></li>
+                    <li><a id="admin-panel" href="admin">ADMIN PANEL</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="container">
+        <div class="buttons-row">
+            <button id="shopping-button" class="button">Shopping Cart</button>
+            <button id="recommend-button" class="button"><a href="/recommend">Recommend Me a Device</a></button>
+        </div>
+        <div id="shopping-cart" class="CartContainer">
+            <div class="Header">
+                <h3 class="Heading">Shopping Cart</h3>
+                <button id="clear-cart" class="Action">Remove all</button>
+            </div>
+            <div class="Cart-Items pad">
+            </div>
+            <hr>
+            <div class="checkout">
+                <div class="total">
+                    <div>
+                        <div class="Subtotal">Sub-Total</div>
+                        <div id="total-items" class="items"></div>
+                    </div>
+                    <div id="total-amount" class="total-amount"></div>
+                </div>
+                <button id="checkout-btn" class="button">Checkout</button>
+            </div>
+        </div>
+        <div class="coming-soon">
+            <div>
+                <h2>Coming Soon!</h2>
+                <div class="card">
+                    <div class="cardcontent">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645572386470"
+                            height="120">
+                        <div class="item">Iphone 13 Pro Max</div>
+                        <div class="desc">-256 GB<br />-12MP Camera<br />-1 Year Warranty</div>
+                        <button class="add-item" onclick="openModal()">View 360</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal">
+            <span id="modal-close">X</span>
+            <div class="Sirv" data-src="https://lopheens.sirv.com/Images/iphone/iphone.spin"></div>
+        </div>
+        <div class="cardssection">
+
+        </div>
+    </div>
+
+    <div id="chatbox" class="chat-container">
+        <div class="chat-container-title" onclick="toggleChatBox()">
+            <p id="chatbox-title"><b>Chat with an Admin</b></p>
+        </div>
+        <div id="chat-body" class="chat-body">
+            <ul id="chat-messages" class="chat-messages"></ul>
+            <form id="chat-form" onsubmit="sendMessage(event)">
+                <div class="chat-input-container">
+                    <textarea name="message" type="text" id="chat-input" class="chat-input"
+                        placeholder="Enter a message..."></textarea>
+                    <button class="chat-send" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/displayName.js"></script>
+    <script src="/js/toggleShoppingCart.js"></script>
+    <script defer async src="/js/devices.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    <script src="/js/client.js" defer></script>
+
+</body>
+
+</html>

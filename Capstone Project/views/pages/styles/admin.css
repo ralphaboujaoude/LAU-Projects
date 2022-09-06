@@ -1,0 +1,120 @@
+body {
+  background-color: antiquewhite;
+}
+
+.option-container {
+  background-color: #c1c1c1;
+  padding: 0 10px 10px;
+  max-width: 80%;
+  margin: 20px auto;
+  border: 3px solid #d6d5d5;
+  border-radius: 5px;
+}
+
+.option-body {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.option-new-input {
+  width: 100%;
+  min-height: 35px;
+}
+
+.option-title {
+  height: 65px;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.option-list {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.option-list table {
+  border-radius: 5px;
+}
+
+.option-list td,
+th {
+  border: 1px solid #ddd;
+  padding: 0 8px;
+}
+
+.option-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.option-list tr:nth-child(odd) {
+  background-color: #dfdddd;
+}
+
+.option-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1d386d;
+  color: white;
+}
+
+.option-input {
+  width: 100%;
+  min-height: 35px;
+  border: none;
+  background-color: transparent;
+}
+.option-input:hover {
+  background-color: #fff;
+}
+
+.option-btn-save {
+  width: 90%;
+  min-height: 35px;
+  margin: auto;
+  cursor: pointer;
+  padding: 0;
+}
+.option-btn-delete {
+  background-color: #ea0f16;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  min-height: 35px;
+  max-width: 40px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #9b1216;
+}
+
+.option-message-container {
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #dfdddd;
+  padding: 10px;
+  max-height: 300px;
+}
+
+.message-container {
+  background-color: #ececec;
+  padding: 3px 10px;
+  min-height: 40px;
+}
+
+.message-sender-fullname {
+  font-weight: bold;
+  color: rgb(69, 69, 71);
+}
+
+.message-sender-email {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.message-content {
+  text-indent: 20px;
+}

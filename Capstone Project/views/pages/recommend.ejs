@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/devices.css" />
+  <link rel="stylesheet" href="/styles/recommend.css" />
+  <link rel="stylesheet" href="/styles/chat.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900"
+    rel="stylesheet"
+  />
+  <script src="https://scripts.sirv.com/sirv.js"></script>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="/"><img src="/images/logo_p1.jpg" /></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="devices">DEVICES</a></li>
+          <li><a href="about-us">ABOUT</a></li>
+          <li><a href="contact-us">CONTACT US</a></li>
+          <li class="not-logged"><a href="login">LOGIN</a></li>
+          <li class="not-logged"><a href="register">REGISTER</a></li>
+          <li class="logged"></li>
+          <li><a id="logout">LOGOUT</a></li>
+          <li><a id="admin-panel" href="admin">ADMIN PANEL</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <div class="container">
+    <h1>Recommend Me</h1>
+    <h2>I want:</h2>
+    <div id="recommend-container" class="recommend-container"></div>
+    <div id="recommend-result" class="recommend-result"></div>
+  </div>
+
+  <div id="chatbox" class="chat-container">
+    <div class="chat-container-title" onclick="toggleChatBox()">
+      <p id="chatbox-title"><b>Chat with an Admin</b></p>
+    </div>
+    <div id="chat-body" class="chat-body">
+      <ul id="chat-messages" class="chat-messages"></ul>
+      <form id="chat-form" onsubmit="sendMessage(event)">
+        <div class="chat-input-container">
+          <textarea
+            name="message"
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="Enter a message..."
+          ></textarea>
+          <button class="chat-send" type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/js/displayName.js"></script>
+  <script defer async src="/js/decision.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+  <script src="/js/client.js" defer></script>
+</body>

@@ -1,0 +1,49 @@
+.container {
+  padding: 30px;
+}
+
+h1,
+h2 {
+  margin: 20px;
+  color: #fff;
+}
+
+h1 {
+  margin: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.recommend-container {
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.recommend-result {
+  display: grid;
+}
+
+.recommend {
+  background-color: aliceblue;
+  width: 400px;
+  height: 60px;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  margin: 20px auto;
+  border: 5px solid darkblue;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.recommend:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+.card {
+  background-color: white;
+}

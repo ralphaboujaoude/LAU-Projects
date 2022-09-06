@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/styles/admin.css" />
+</head>
+
+<body>
+  <a href="/">Back to HomePage</a>
+  <div class="options-container">
+    <div class="option-container">
+      <div id="users-title">
+        <h2 class="option-title">Users</h2>
+      </div>
+      <div id="option-users-table" class="option-body">
+        <table id="users-list" class="option-list">
+          <tr class="option-list-header">
+            <th>Email</th>
+            <th>Username</th>
+            <th>Admin</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tbody>
+            <tr>
+              <form id="form-new-user" onsubmit="createUser(event)">
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                    form="form-new-user"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="text"
+                    name="username"
+                    placeholder="username"
+                    form="form-new-user"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                    form="form-new-user"
+                    required
+                  />
+                </td>
+                <td>
+                  <label form="isAdmin">Admin</label>
+                  <input
+                    type="checkbox"
+                    name="isAdmin"
+                    value="yes"
+                    form="form-new-user"
+                  />
+                </td>
+                <td><button type="submit">Create</button></td>
+              </form>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="option-container">
+      <div id="devices-title">
+        <h2 class="option-title">Devices</h2>
+      </div>
+      <div id="option-devices-table" class="option-body">
+        <table id="devices-list" class="option-list">
+          <tr class="option-list-header">
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Categories</th>
+            <th>Image URL</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tbody>
+            <tr>
+              <form id="form-new-device" onsubmit="createDevice(event)">
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="text"
+                    name="title"
+                    placeholder="Title"
+                    form="form-new-device"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="number"
+                    name="price"
+                    placeholder="Price"
+                    form="form-new-device"
+                    required
+                  />
+                </td>
+                <td>
+                  <textarea
+                    class="option-new-input"
+                    name="description"
+                    placeholder="Description"
+                    required
+                  ></textarea>
+                </td>
+                <td>
+                  <input
+                    class="option-new-input"
+                    type="text"
+                    name="img"
+                    placeholder="ImageUrl"
+                    form="form-new-device"
+                    required
+                  />
+                </td>
+                <td><button type="submit">Create</button></td>
+              </form>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="option-container">
+      <div id="messages-title">
+        <h2 class="option-title">Form Messages</h2>
+      </div>
+      <div id="messages-list" class="option-list"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/js/admin/admin.js"></script>
+  <script src="/js/admin/users.js"></script>
+  <script src="/js/admin/devices.js"></script>
+  <script src="/js/admin/contact.js"></script>
+</body>

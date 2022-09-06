@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "627f664c809787e337b90705"
+  },
+  "title": "Iphone 12",
+  "price": 800,
+  "description": "Iphon 12 128gb, 8M pixel camera, IOS 13",
+  "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1617135051000",
+  "categories": [
+    "Phone",
+    "Performance",
+    "IOS"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627f66a9809787e337b90709"
+  },
+  "title": "Samsung S21 Ultra",
+  "price": 634,
+  "description": "Samsung Galaxy S21 Ultra 256gb, 12M pixel camera, Android 9.2",
+  "img": "https://unite4buy.ru/media/images/2021/01/15/galaxy-s21-ultra-4_XwebNzC.jpg",
+  "categories": [
+    "Phone",
+    "Performance",
+    "Android"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627f66e2809787e337b9070b"
+  },
+  "title": "Huawei Nova 3i",
+  "price": 200,
+  "description": "Huawei Nova 3i 128gb, 6M pixel camera, Android 8.1",
+  "img": "https://static.turbosquid.com/Preview/001329/170/Q4/_600.jpg",
+  "categories": [
+    "Phone",
+    "Budget",
+    "Android"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627f6766809787e337b9070e"
+  },
+  "title": "Hp Pavilion 360",
+  "price": 450,
+  "description": "Hp Pavilion 360 fold, Ram 8GB, 256GB SSD, Intel core i5-7th gen",
+  "img": "https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFMYVJEbTdsZUwuX0FDX1NMMTUwMF8uanBn.jpg",
+  "categories": [
+    "Laptop",
+    "Portbale",
+    "Business",
+    "Programming",
+    "Budget"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627f70b0809787e337b90713"
+  },
+  "title": "Hp Omen",
+  "price": 1200,
+  "description": "Hp Omen, Ram 16GB, 256GB SSD and 1TB HDD, Intel core i7-8th gen, Nvidia 1060-GTX",
+  "img": "https://www.notebookcheck.net/uploads/tx_nbc2/HPOmen15-dh__1__01.jpg",
+  "categories": [
+    "Laptop",
+    "Portbale",
+    "Gaming",
+    "Programming",
+    "Performance"
+  ],
+  "__v": 0
+}]
